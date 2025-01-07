@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text should be visible.
+  </div>
+
+  <script>
+    //Incorrect way to check for null or undefined in older browsers
+    if (document.getElementById('myDiv') == null || document.getElementById('myDiv') == undefined){
+        console.error("Div not found");
+    } else {
+        document.getElementById('myDiv').style.display = 'none';
+    }
+  </script>
+</body>
+</html>
